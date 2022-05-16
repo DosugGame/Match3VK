@@ -14,9 +14,11 @@
     <script type="text/javascript">
 
       vkBridge.send('VKWebAppInit');
-      vkBridge.send("VKWebAppShowWallPostBox", {"message": "Hello!"});
- console.log("Hello");
-
+      vkBridge.send("VKWebAppShowWallPostBox", {
+  "message": "Hello!",
+  "attachments": "https://github.com/DosugGame/Match3VK/blob/main/logo.png"
+});
+https://github.com/DosugGame/Match3VK/blob/main/logo.png
 
      function auth(){
         vkBridge.send('VKWebAppGetUserInfo').then(_info =>{
