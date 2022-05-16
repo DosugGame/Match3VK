@@ -14,10 +14,14 @@
     <script type="text/javascript">
 
       vkBridge.send('VKWebAppInit');
-      vkBridge.send("VKWebAppAddToFavorites").then(result =>{
-        console.log(result);
+      
+      vkBridge.send("VKWebAppAddToFavorites").then(data =>{
+        console.log(data);
        
-      };
+      });
+      
+      
+     
       vkBridge.send("VKWebAppShowWallPostBox", {
   "message": "Hello!",
   "attachments": "https://vk.com/app8153134"
