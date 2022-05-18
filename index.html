@@ -22,16 +22,19 @@
       
       
      
-      vkBridge.send("VKWebAppShowWallPostBox", {
-  "message": "Hello!",
-  "attachments": "https://vk.com/app8153134"
-});
+      
 https://github.com/DosugGame/Match3VK/blob/main/logo.png
 
      function auth(){
         vkBridge.send('VKWebAppGetUserInfo').then(_info =>{
           console.log(_info);
           unityI.SendMessage('VKSDK', 'AuthenticateSuccess', JSON.stringify(_info));
+        });
+      }
+       function sendtothewallVK(message){
+        vkBridge.send("VKWebAppShowWallPostBox", {
+      "message": message,
+      "attachments": "https://vk.com/app8153134"
         });
       }
 
